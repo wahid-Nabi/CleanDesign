@@ -1,0 +1,78 @@
+2024-07-21 09:38:49.748 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 09:38:50.040 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 09:38:50.044 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 09:38:50.046 +05:30 [INF] Hosting environment: Development
+2024-07-21 09:38:50.048 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\CleanDesign.Presentation
+2024-07-21 09:38:51.642 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 09:38:51.734 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 95.0683ms
+2024-07-21 09:38:51.816 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 09:38:51.825 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 9.3221ms
+2024-07-21 09:38:51.953 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 09:38:52.048 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.4226ms
+2024-07-21 09:40:02.929 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/login - application/json 51
+2024-07-21 09:40:02.959 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 09:40:03.111 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 09:40:03.148 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanDesign.Application.Auth.Queries.Login.LoginQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 09:40:03.201 +05:30 [INF] user@example.com is trying to logIn
+2024-07-21 09:40:03.203 +05:30 [WRN] user@example.com is not valid email
+2024-07-21 09:40:03.204 +05:30 [ERR] user@example.com is not able to login
+2024-07-21 09:40:10.260 +05:30 [INF] Executed DbCommand (174ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 09:40:10.315 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'CleanDesign.SharedKernel.Error'.
+2024-07-21 09:40:10.337 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation) in 7180.4219ms
+2024-07-21 09:40:10.340 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 09:40:10.358 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/login - 400 null application/json; charset=utf-8 7429.2492ms
+2024-07-21 09:40:27.444 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/register - application/json 159
+2024-07-21 09:40:27.452 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Register (CleanDesign.Presentation)'
+2024-07-21 09:40:27.462 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CleanDesign.Application.Auth.Commands.Register.RegisterCommand) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 09:40:27.607 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Register (CleanDesign.Presentation) in 142.3739ms
+2024-07-21 09:40:27.609 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Register (CleanDesign.Presentation)'
+2024-07-21 09:40:27.678 +05:30 [ERR] System.InvalidOperationException: The funciton does not work like this
+   at CleanDesign.Presentation.Controllers.AuthController.Register(RegisterCommand command) in D:\PersonalProject\CleanDesign\CleanDesign.Presentation\Controllers\AuthController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 25
+2024-07-21 09:40:27.685 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/register - 500 null application/json; charset=utf-8 240.5577ms
+2024-07-21 09:45:14.229 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 09:45:14.521 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 09:45:14.525 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 09:45:14.528 +05:30 [INF] Hosting environment: Development
+2024-07-21 09:45:14.532 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\CleanDesign.Presentation
+2024-07-21 09:45:16.146 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 09:45:16.249 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 107.3973ms
+2024-07-21 09:45:16.333 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 09:45:16.350 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 17.1073ms
+2024-07-21 09:45:16.528 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 09:45:16.660 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.9533ms
+2024-07-21 09:45:23.125 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/register - application/json 159
+2024-07-21 09:45:23.139 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 09:45:23.280 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Register (CleanDesign.Presentation)'
+2024-07-21 09:45:23.336 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CleanDesign.Application.Auth.Commands.Register.RegisterCommand) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 09:45:23.541 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Register (CleanDesign.Presentation) in 194.219ms
+2024-07-21 09:45:23.553 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Register (CleanDesign.Presentation)'
+2024-07-21 09:45:23.677 +05:30 [ERR] System.InvalidCastException: Specified cast is not valid.
+   at CleanDesign.Presentation.Controllers.AuthController.Register(RegisterCommand command) in D:\PersonalProject\CleanDesign\CleanDesign.Presentation\Controllers\AuthController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 25
+2024-07-21 09:45:23.692 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/register - 500 null application/json; charset=utf-8 566.8324ms
