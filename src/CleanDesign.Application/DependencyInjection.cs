@@ -10,6 +10,8 @@ namespace CleanDesign.Application
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
             return services;
         }
     }

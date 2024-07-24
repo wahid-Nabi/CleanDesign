@@ -7,6 +7,14 @@ namespace CleanDesign.Domain.Errors
         public static readonly Error InvalidEmail = new(
             "Auth.InvalidEmail",
             "Provided email is not valid!");
+        
+        public static readonly Error EmailNotConfirmed = new(
+            "Auth.EmailNotConfirmed",
+            "Email is not confirmed, Please confirm your email first!");
+
+        public static readonly Error InvalidToken = new("Auth.InvalidToken", "Provided bearer token is not valid!");
+        public static readonly Error PasswordResetFailed = new("Auth.PasswordResetFailed", "Reset password failed!");
+        public static readonly Error EmailConfirmationFailed = new("Auth.EmailConfirmationFailed", "Email Confirmation Failed!");
 
     }
     public static class LoginErrors

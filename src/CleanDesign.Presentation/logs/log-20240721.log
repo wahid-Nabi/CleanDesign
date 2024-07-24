@@ -76,3 +76,769 @@ WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
    at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
    at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 25
 2024-07-21 09:45:23.692 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/register - 500 null application/json; charset=utf-8 566.8324ms
+2024-07-21 12:05:11.947 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 12:05:12.173 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 12:05:12.177 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 12:05:12.178 +05:30 [INF] Hosting environment: Development
+2024-07-21 12:05:12.180 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 12:05:12.850 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-07-21 12:05:12.850 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 12:05:13.171 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 499 null null 330.0355ms
+2024-07-21 12:05:13.278 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 437.4574ms
+2024-07-21 12:05:13.317 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 12:05:13.319 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - null null
+2024-07-21 12:05:13.321 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 12:05:13.327 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 9.9513ms
+2024-07-21 12:05:13.352 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-07-21 12:05:13.355 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - 499 152034 text/css 35.9581ms
+2024-07-21 12:05:13.413 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.4777ms
+2024-07-21 12:05:13.498 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 12:05:13.663 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 164.9459ms
+2024-07-21 12:05:41.879 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/login - application/json 67
+2024-07-21 12:05:41.905 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 12:05:42.075 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 12:05:42.118 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanDesign.Application.Auth.Queries.Login.LoginQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:05:46.382 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 12:05:46.769 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-21 12:05:46.789 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 12:05:47.000 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@p20='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 50), @p21='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 50), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 250), @p13='?' (Size = 15), @p14='?' (DbType = Boolean), @p15='?' (Size = 50), @p16='?' (DbType = Boolean), @p17='?' (DbType = Guid), @p18='?' (DbType = DateTime2), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedBy] = @p2, [CreatedOn] = @p3, [Deleted] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [Name] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UpdatedBy] = @p17, [UpdatedOn] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2024-07-21 12:05:47.117 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-07-21 12:05:47.171 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-07-21 12:05:47.195 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Name], [a].[NormalizedName], [a].[UpdatedBy], [a].[UpdatedOn]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-07-21 12:05:47.244 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-07-21 12:05:47.283 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-07-21 12:05:47.391 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result`1[[CleanDesign.Application.ViewModels.TokenViewModel, CleanDesign.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-21 12:05:47.425 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation) in 5296.5556ms
+2024-07-21 12:05:47.428 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 12:05:47.444 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/login - 200 null application/json; charset=utf-8 5565.0041ms
+2024-07-21 12:10:34.292 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 12:10:34.432 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 12:10:34.438 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 12:10:34.441 +05:30 [INF] Hosting environment: Development
+2024-07-21 12:10:34.442 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 12:10:35.044 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-07-21 12:10:35.135 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 12:10:35.209 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 499 null null 170.5873ms
+2024-07-21 12:10:35.251 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 116.1944ms
+2024-07-21 12:10:35.277 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 12:10:35.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 12:10:35.299 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 22.5251ms
+2024-07-21 12:10:35.334 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.3435ms
+2024-07-21 12:10:35.439 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 12:10:35.521 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.1901ms
+2024-07-21 12:11:00.644 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/login - application/json 67
+2024-07-21 12:11:00.667 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 12:11:00.803 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 12:11:00.857 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanDesign.Application.Auth.Queries.Login.LoginQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:11:04.504 +05:30 [INF] Executed DbCommand (81ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 12:11:05.248 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-07-21 12:11:05.302 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-07-21 12:11:05.343 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Name], [a].[NormalizedName], [a].[UpdatedBy], [a].[UpdatedOn]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-07-21 12:11:05.451 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-07-21 12:11:05.498 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-07-21 12:11:05.610 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result`1[[CleanDesign.Application.ViewModels.TokenViewModel, CleanDesign.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-21 12:11:05.662 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation) in 4788.0452ms
+2024-07-21 12:11:05.675 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 12:11:05.696 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/login - 200 null application/json; charset=utf-8 5051.3037ms
+2024-07-21 12:11:24.334 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/dummy - null null
+2024-07-21 12:11:24.407 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 12:11:24.431 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 12:11:24.441 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-07-21 12:11:24.453 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-07-21 12:11:24.455 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/dummy - 401 0 null 121.9692ms
+2024-07-21 12:11:37.334 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/dummy - null null
+2024-07-21 12:11:37.341 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 12:11:37.345 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 12:11:37.353 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-07-21 12:11:37.355 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-07-21 12:11:37.357 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/dummy - 401 0 null 22.8895ms
+2024-07-21 12:12:08.679 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 830
+2024-07-21 12:12:08.685 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 12:12:08.688 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 12:12:08.689 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:12:08.700 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:12:09.106 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation) in 404.4923ms
+2024-07-21 12:12:09.111 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:12:09.201 +05:30 [ERR] Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT must have three segments (JWS) or five segments (JWE).
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at CleanDesign.Infrastructure.AuthHelpers.AuthHelper.GetPrincipalFromExpiredToken(String token) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\AuthHelpers\AuthHelper.cs:line 76
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.RefreshTokenAsync(TokenViewModel model) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 77
+   at CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQueryHandler.Handle(RefreshTokenQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Auth\Queries\RefreshToken\RefreshTokenQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.RefreshToken(RefreshTokenQuery query) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 12:12:09.209 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - 400 null application/json; charset=utf-8 529.477ms
+2024-07-21 12:12:29.502 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 830
+2024-07-21 12:12:29.513 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 12:12:29.518 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 12:12:29.519 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:12:29.520 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:12:29.775 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation) in 253.7694ms
+2024-07-21 12:12:29.778 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:12:29.824 +05:30 [ERR] Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT must have three segments (JWS) or five segments (JWE).
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at CleanDesign.Infrastructure.AuthHelpers.AuthHelper.GetPrincipalFromExpiredToken(String token) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\AuthHelpers\AuthHelper.cs:line 76
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.RefreshTokenAsync(TokenViewModel model) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 77
+   at CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQueryHandler.Handle(RefreshTokenQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Auth\Queries\RefreshToken\RefreshTokenQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.RefreshToken(RefreshTokenQuery query) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 12:12:29.830 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - 400 null application/json; charset=utf-8 328.5827ms
+2024-07-21 12:13:24.745 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 830
+2024-07-21 12:13:24.841 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 12:13:24.881 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 12:13:24.888 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:13:24.891 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:13:51.499 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation) in 26603.9128ms
+2024-07-21 12:13:51.502 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:13:51.515 +05:30 [ERR] Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT must have three segments (JWS) or five segments (JWE).
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at CleanDesign.Infrastructure.AuthHelpers.AuthHelper.GetPrincipalFromExpiredToken(String token) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\AuthHelpers\AuthHelper.cs:line 76
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.RefreshTokenAsync(TokenViewModel model) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 77
+   at CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQueryHandler.Handle(RefreshTokenQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Auth\Queries\RefreshToken\RefreshTokenQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.RefreshToken(RefreshTokenQuery query) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 12:13:51.519 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - 400 null application/json; charset=utf-8 26774.6119ms
+2024-07-21 12:13:54.214 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 830
+2024-07-21 12:13:54.226 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 12:13:54.231 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 12:13:54.233 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:13:54.236 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:16:17.894 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 12:16:18.055 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 12:16:18.061 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 12:16:18.066 +05:30 [INF] Hosting environment: Development
+2024-07-21 12:16:18.070 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 12:16:18.677 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-07-21 12:16:18.794 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 12:16:18.858 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 499 null null 188.612ms
+2024-07-21 12:16:18.940 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 147.6467ms
+2024-07-21 12:16:18.977 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 12:16:18.980 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - null null
+2024-07-21 12:16:18.989 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 12:16:18.992 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 14.6701ms
+2024-07-21 12:16:19.020 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-07-21 12:16:19.023 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - 499 152034 text/css 44.1296ms
+2024-07-21 12:16:19.050 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.4296ms
+2024-07-21 12:16:19.177 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 12:16:19.273 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.7514ms
+2024-07-21 12:16:58.505 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/login - application/json 67
+2024-07-21 12:16:58.552 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 12:17:15.981 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 12:17:16.013 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanDesign.Application.Auth.Queries.Login.LoginQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:17:18.724 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 12:17:19.199 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-07-21 12:17:19.242 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-07-21 12:17:19.266 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Name], [a].[NormalizedName], [a].[UpdatedBy], [a].[UpdatedOn]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-07-21 12:17:19.314 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-07-21 12:17:19.343 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-07-21 12:17:19.438 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result`1[[CleanDesign.Application.ViewModels.TokenViewModel, CleanDesign.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-21 12:17:19.471 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation) in 3451.3166ms
+2024-07-21 12:17:19.475 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 12:17:19.487 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/login - 200 null application/json; charset=utf-8 20982.079ms
+2024-07-21 12:17:39.535 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 835
+2024-07-21 12:17:39.554 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:17:39.563 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:17:39.634 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-07-21 12:17:39.678 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation) in 111.589ms
+2024-07-21 12:17:39.684 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:17:39.688 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - 400 null application/problem+json; charset=utf-8 160.9161ms
+2024-07-21 12:17:48.179 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 834
+2024-07-21 12:17:48.187 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:17:48.187 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:19:33.332 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-21 12:19:52.183 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation) in 123993.8649ms
+2024-07-21 12:19:52.190 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:19:52.313 +05:30 [ERR] Microsoft.IdentityModel.Tokens.SecurityTokenValidationException: Exception of type 'Microsoft.IdentityModel.Tokens.SecurityTokenValidationException' was thrown.
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.RefreshTokenAsync(TokenViewModel model) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 85
+   at CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQueryHandler.Handle(RefreshTokenQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Auth\Queries\RefreshToken\RefreshTokenQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.RefreshToken(RefreshTokenQuery query) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 12:19:52.319 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - 400 null application/json; charset=utf-8 124140.1306ms
+2024-07-21 12:20:08.922 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 834
+2024-07-21 12:20:08.933 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:20:08.934 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 12:20:27.841 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-21 12:20:27.962 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation) in 19025.5987ms
+2024-07-21 12:20:27.966 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 12:20:28.005 +05:30 [ERR] Microsoft.IdentityModel.Tokens.SecurityTokenValidationException: Exception of type 'Microsoft.IdentityModel.Tokens.SecurityTokenValidationException' was thrown.
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.RefreshTokenAsync(TokenViewModel model) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 85
+   at CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQueryHandler.Handle(RefreshTokenQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Auth\Queries\RefreshToken\RefreshTokenQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.RefreshToken(RefreshTokenQuery query) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 12:20:28.007 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - 400 null application/json; charset=utf-8 19084.965ms
+2024-07-21 14:12:38.080 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 14:12:38.094 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 14.7526ms
+2024-07-21 14:12:38.133 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 14:12:38.143 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 9.4643ms
+2024-07-21 14:12:38.157 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 14:12:38.194 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.1377ms
+2024-07-21 14:12:38.491 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 14:12:38.514 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.1039ms
+2024-07-21 14:14:52.120 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 14:14:52.272 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 14:14:52.279 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 14:14:52.283 +05:30 [INF] Hosting environment: Development
+2024-07-21 14:14:52.287 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 14:14:52.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 14:14:53.038 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 167.1441ms
+2024-07-21 14:14:53.065 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 14:14:53.066 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 14:14:53.084 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 16.9352ms
+2024-07-21 14:14:53.116 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.6074ms
+2024-07-21 14:14:53.172 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 14:14:53.253 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.4497ms
+2024-07-21 14:15:25.331 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/login - application/json 67
+2024-07-21 14:15:25.394 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 14:15:37.386 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 14:15:37.408 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanDesign.Application.Auth.Queries.Login.LoginQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 14:15:40.294 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 14:15:40.641 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-07-21 14:15:40.695 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-07-21 14:15:40.733 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Name], [a].[NormalizedName], [a].[UpdatedBy], [a].[UpdatedOn]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-07-21 14:15:40.790 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-07-21 14:15:40.839 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-07-21 14:15:40.930 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result`1[[CleanDesign.Application.ViewModels.TokenViewModel, CleanDesign.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-21 14:15:40.968 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation) in 3552.4833ms
+2024-07-21 14:15:40.979 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-07-21 14:15:41.003 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/login - 200 null application/json; charset=utf-8 15674.9972ms
+2024-07-21 14:16:29.111 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/dummy - null null
+2024-07-21 14:16:29.167 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 14:16:29.194 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 14:16:29.212 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-07-21 14:16:29.231 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-07-21 14:16:29.236 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/dummy - 401 0 null 130.0311ms
+2024-07-21 14:17:04.986 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - application/json 854
+2024-07-21 14:17:04.994 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'IDX10820: Invalid character found in Base64UrlEncoding. Character: '32', Encoding: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.')
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode(String input, Int32 offset, Int32 length, Byte[] output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-07-21 14:17:05.004 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-07-21 14:17:05.011 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 14:17:05.025 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(CleanDesign.Application.Auth.Queries.RefreshToken.RefreshTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 14:17:07.973 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-21 14:17:08.001 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result`1[[CleanDesign.Application.ViewModels.TokenViewModel, CleanDesign.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-21 14:17:08.009 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation) in 2974.3547ms
+2024-07-21 14:17:08.013 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.RefreshToken (CleanDesign.Presentation)'
+2024-07-21 14:17:08.018 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/refresh-token - 200 null application/json; charset=utf-8 3031.8234ms
+2024-07-21 14:17:57.164 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 14:17:57.183 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 18.8215ms
+2024-07-21 14:17:57.236 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 14:17:57.245 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 7.9846ms
+2024-07-21 14:17:57.256 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 14:17:57.313 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.4296ms
+2024-07-21 14:17:57.528 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 14:17:57.540 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.4435ms
+2024-07-21 15:54:37.465 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 15:54:37.625 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 15:54:37.627 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 15:54:37.639 +05:30 [INF] Hosting environment: Development
+2024-07-21 15:54:37.639 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 15:54:38.420 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-07-21 15:54:38.420 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 15:54:38.672 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 499 null null 261.6818ms
+2024-07-21 15:54:38.732 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 322.738ms
+2024-07-21 15:54:38.772 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 15:54:38.773 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - null null
+2024-07-21 15:54:38.780 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 15:54:38.780 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 8.3225ms
+2024-07-21 15:54:38.842 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-07-21 15:54:38.845 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - 499 152034 text/css 71.7415ms
+2024-07-21 15:54:39.442 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 661.5406ms
+2024-07-21 15:54:39.487 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 15:54:39.581 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.9858ms
+2024-07-21 15:55:18.342 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 15:55:18.354 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 11.709ms
+2024-07-21 15:55:18.407 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 15:55:18.411 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 15:55:18.425 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 14.6091ms
+2024-07-21 15:55:18.445 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.0645ms
+2024-07-21 15:55:18.700 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 15:55:18.713 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.1162ms
+2024-07-21 15:56:03.796 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 15:56:03.852 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 15:56:04.116 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 15:56:04.191 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 15:56:07.591 +05:30 [INF] Executed DbCommand (247ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 15:57:01.747 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation) in 57545.6534ms
+2024-07-21 15:57:01.750 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 15:57:01.816 +05:30 [ERR] System.NotImplementedException: The method or operation is not implemented.
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.ForgetPasswordAsync(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 107
+   at CleanDesign.Application.Queries.Auth.ForgetPassword.ForgetPasswordQueryHandler.Handle(ForgetPasswordQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Queries\Auth\ForgetPassword\ForgetPasswordQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.ForgetPassword(String email)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2024-07-21 15:57:01.855 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - 500 null application/json; charset=utf-8 58059.1215ms
+2024-07-21 16:01:23.336 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 16:01:23.591 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 16:01:23.594 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 16:01:23.595 +05:30 [INF] Hosting environment: Development
+2024-07-21 16:01:23.596 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 16:01:24.396 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-07-21 16:01:24.550 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 499 null null 156.9986ms
+2024-07-21 16:01:24.591 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 16:01:24.653 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 62.0537ms
+2024-07-21 16:01:24.693 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 16:01:24.694 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - null null
+2024-07-21 16:01:24.705 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 16:01:24.723 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 30.5695ms
+2024-07-21 16:01:24.737 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-07-21 16:01:24.746 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - 499 152034 text/css 51.9034ms
+2024-07-21 16:01:24.775 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.7883ms
+2024-07-21 16:01:24.897 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 16:01:25.007 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.8793ms
+2024-07-21 16:01:44.042 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 16:01:44.055 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 16:01:44.194 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:01:44.271 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 16:01:47.765 +05:30 [INF] Executed DbCommand (89ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 16:02:23.370 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation) in 39085.669ms
+2024-07-21 16:02:23.376 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:02:23.445 +05:30 [ERR] System.NotImplementedException: The method or operation is not implemented.
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.ForgetPasswordAsync(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 107
+   at CleanDesign.Application.Queries.Auth.ForgetPassword.ForgetPasswordQueryHandler.Handle(ForgetPasswordQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Queries\Auth\ForgetPassword\ForgetPasswordQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.ForgetPassword(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 63
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 16:02:23.504 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - 500 null application/json; charset=utf-8 39461.9796ms
+2024-07-21 16:03:22.478 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 16:03:22.496 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 18.2152ms
+2024-07-21 16:03:22.594 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 16:03:22.609 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 16:03:22.613 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 19.6055ms
+2024-07-21 16:03:22.673 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.6423ms
+2024-07-21 16:03:22.753 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-07-21 16:03:22.759 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-07-21 16:03:22.761 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 499 628 image/png 7.8156ms
+2024-07-21 16:03:22.851 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 16:03:22.867 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.2468ms
+2024-07-21 16:03:45.392 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 16:03:45.426 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:03:45.438 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 16:03:45.580 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 16:04:10.952 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation) in 25513.5623ms
+2024-07-21 16:04:10.958 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:04:10.997 +05:30 [ERR] System.NotImplementedException: The method or operation is not implemented.
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.ForgetPasswordAsync(String email)
+   at CleanDesign.Application.Queries.Auth.ForgetPassword.ForgetPasswordQueryHandler.Handle(ForgetPasswordQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Queries\Auth\ForgetPassword\ForgetPasswordQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.ForgetPassword(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 63
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 16:04:11.003 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - 500 null application/json; charset=utf-8 25610.3998ms
+2024-07-21 16:21:02.003 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 16:21:02.197 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 16:21:02.201 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 16:21:02.203 +05:30 [INF] Hosting environment: Development
+2024-07-21 16:21:02.205 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 16:21:02.915 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-07-21 16:21:02.989 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 16:21:03.096 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 499 null null 186.4844ms
+2024-07-21 16:21:03.155 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 165.7511ms
+2024-07-21 16:21:03.190 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 16:21:03.196 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 16:21:03.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 7.6378ms
+2024-07-21 16:21:03.244 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.755ms
+2024-07-21 16:21:03.281 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-07-21 16:21:03.306 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-07-21 16:21:03.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 499 628 image/png 28.0349ms
+2024-07-21 16:21:03.329 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 16:21:03.429 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 100.129ms
+2024-07-21 16:21:29.780 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 16:21:29.818 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 16:21:30.025 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:21:30.197 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 16:21:34.019 +05:30 [INF] Executed DbCommand (89ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 16:21:34.521 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation) in 4279.8987ms
+2024-07-21 16:21:34.530 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:21:34.695 +05:30 [ERR] System.ArgumentNullException: Value cannot be null. (Parameter 'from')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)
+   at System.ArgumentException.ThrowIfNullOrEmpty(String argument, String paramName)
+   at System.Net.Mail.MailMessage..ctor(String from, String to)
+   at CleanDesign.Infrastructure.Services.EmailSender.SendEmail(EmailViewModel model) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Services\EmailSender.cs:line 22
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.ForgetPasswordAsync(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 110
+   at CleanDesign.Application.Queries.Auth.ForgetPassword.ForgetPasswordQueryHandler.Handle(ForgetPasswordQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Queries\Auth\ForgetPassword\ForgetPasswordQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.ForgetPassword(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 63
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 16:21:34.734 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - 400 null application/json; charset=utf-8 4954.7722ms
+2024-07-21 16:22:28.022 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 16:22:28.048 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:22:28.055 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 16:22:33.752 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 16:22:33.881 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation) in 5814.8553ms
+2024-07-21 16:22:33.887 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:22:33.974 +05:30 [ERR] System.ArgumentNullException: Value cannot be null. (Parameter 'from')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)
+   at System.ArgumentException.ThrowIfNullOrEmpty(String argument, String paramName)
+   at System.Net.Mail.MailMessage..ctor(String from, String to)
+   at CleanDesign.Infrastructure.Services.EmailSender.SendEmail(EmailViewModel model) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Services\EmailSender.cs:line 22
+   at CleanDesign.Infrastructure.Repositories.AuthRepository.ForgetPasswordAsync(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Infrastructure\Repositories\AuthRepository.cs:line 110
+   at CleanDesign.Application.Queries.Auth.ForgetPassword.ForgetPasswordQueryHandler.Handle(ForgetPasswordQuery request, CancellationToken cancellationToken) in D:\PersonalProject\CleanDesign\src\CleanDesign.Application\Queries\Auth\ForgetPassword\ForgetPasswordQueryHandler.cs:line 18
+   at CleanDesign.Presentation.Controllers.AuthController.ForgetPassword(String email) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Controllers\AuthController.cs:line 63
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-07-21 16:22:33.983 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - 400 null application/json; charset=utf-8 5960.7731ms
+2024-07-21 16:22:39.965 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 16:22:49.205 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:22:49.210 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 16:23:00.422 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 16:25:09.350 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 16:25:09.490 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 16:25:09.497 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 16:25:09.502 +05:30 [INF] Hosting environment: Development
+2024-07-21 16:25:09.504 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 16:25:10.002 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 16:25:10.185 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 186.0594ms
+2024-07-21 16:25:10.225 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 16:25:10.246 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 16:25:10.250 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 26.2217ms
+2024-07-21 16:25:10.331 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.3262ms
+2024-07-21 16:25:10.379 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 16:25:10.496 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.8175ms
+2024-07-21 16:26:05.533 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 16:26:05.554 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 16:26:05.706 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:26:05.745 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 16:26:17.668 +05:30 [INF] Executed DbCommand (86ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 16:28:25.252 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-21 16:28:25.402 +05:30 [INF] Now listening on: http://localhost:5068
+2024-07-21 16:28:25.408 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-21 16:28:25.413 +05:30 [INF] Hosting environment: Development
+2024-07-21 16:28:25.417 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-07-21 16:28:26.111 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-07-21 16:28:26.308 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 204.8159ms
+2024-07-21 16:28:26.345 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-21 16:28:26.358 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-07-21 16:28:26.359 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 13.2888ms
+2024-07-21 16:28:26.408 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.7922ms
+2024-07-21 16:28:26.546 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-07-21 16:28:26.742 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 196.3552ms
+2024-07-21 16:28:51.542 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - null null
+2024-07-21 16:28:51.557 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-21 16:28:51.738 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:28:51.770 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-07-21 16:28:59.751 +05:30 [INF] Executed DbCommand (64ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-21 16:29:05.841 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result'.
+2024-07-21 16:29:05.860 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation) in 14085.2101ms
+2024-07-21 16:29:05.864 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-07-21 16:29:05.874 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.admin@yopmail.com - 200 null application/json; charset=utf-8 14332.4629ms

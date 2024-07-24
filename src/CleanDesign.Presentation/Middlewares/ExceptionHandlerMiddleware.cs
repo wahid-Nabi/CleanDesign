@@ -1,8 +1,10 @@
 ﻿using Azure;
 using CleanDesign.Application.Errors;
+using CleanDesign.Domain.Errors;
 using CleanDesign.Infrastructure.Exceptions;
 using CleanDesign.Presentation.Errors;
 using CleanDesign.SharedKernel;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Net;
 
@@ -38,6 +40,10 @@ namespace CleanDesign.Presentation.Exceptions
             Error error;
             switch (exception)
             {
+                case EmailNotRegisteredException:
+                    context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                    error = AuthValidationErrors.EmailNotRegistered;
+                    break;
                 case EmailNullException:
                     context.Response.StatusCode = StatusCodes.Status400BadRequest;
                     error = AuthValidationErrors.EmailNull;
@@ -51,6 +57,11 @@ namespace CleanDesign.Presentation.Exceptions
                 case ArgumentException:
                     context.Response.StatusCode = StatusCodes.Status400BadRequest;
                     error = Error.NullValue;
+                    break;
+
+                case SecurityTokenException:
+                    context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                    error = GenericAuthErrors.InvalidToken;
                     break;
 
                 default:

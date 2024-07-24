@@ -2,9 +2,9 @@
 using CleanDesign.SharedKernel;
 using System.ComponentModel.DataAnnotations;
 
-namespace CleanDesign.Application.Auth.Commands.Register
+namespace CleanDesign.Application.Commands.Auth.Register
 {
-    public class RegisterCommand : IRequest<Result<bool>>
+    public class RegisterCommand : IRequest<Result>
     {
         [EmailAddress]
         public required string Email { get; set; }

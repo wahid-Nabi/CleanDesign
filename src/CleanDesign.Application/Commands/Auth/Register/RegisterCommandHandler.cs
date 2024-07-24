@@ -4,9 +4,9 @@ using CleanDesign.Domain.Interfaces;
 using CleanDesign.SharedKernel;
 using MediatR;
 
-namespace CleanDesign.Application.Auth.Commands.Register
+namespace CleanDesign.Application.Commands.Auth.Register
 {
-    public class RegisterCommandHandler : IRequestHandler<RegisterCommand, Result<bool>>
+    public class RegisterCommandHandler : IRequestHandler<RegisterCommand, Result>
     {
         private readonly IMapper _mapper;
         private readonly IAuthRepository _authRepository;
@@ -17,7 +17,7 @@ namespace CleanDesign.Application.Auth.Commands.Register
             _authRepository = authRepository;
         }
 
-        public async Task<Result<bool>> Handle(RegisterCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(RegisterCommand request, CancellationToken cancellationToken)
         {
             var registerVM = _mapper.Map<RegisterViewModel>(request);
             var result = await _authRepository.RegisterAsync(registerVM);

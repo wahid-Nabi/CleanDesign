@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
-using CleanDesign.Application.Auth.Commands.Register;
-using CleanDesign.Application.Auth.Queries.Login;
+using CleanDesign.Application.Commands.Auth.ConfirmPassword;
+using CleanDesign.Application.Commands.Auth.Register;
+using CleanDesign.Application.Commands.Auth.ResetPassword;
+using CleanDesign.Application.Queries.Auth.Login;
 using CleanDesign.Application.ViewModels;
 
 namespace CleanDesign.Application.Mappings
@@ -11,6 +13,8 @@ namespace CleanDesign.Application.Mappings
         {
             CreateMap<LoginQuery, LoginViewModel>().ReverseMap();
             CreateMap<RegisterCommand, RegisterViewModel>().ReverseMap();
+            CreateMap<ConfirmEmailCommand, ConfirmEmailViewModel>().ReverseMap();
+            CreateMap<ResetPasswordCommand, ResetPasswordViewModel>().ReverseMap();
         }
     }
 }

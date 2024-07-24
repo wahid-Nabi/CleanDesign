@@ -24,26 +24,24 @@ namespace CleanDesign.Infrastructure.AuthHelpers
             _authSettings = appSettingOptions.Value.AuthSettings;
         }
 
-        public async Task<TokenViewModel> GenerateAuthTokens(ApplicationUser user)
+        public async Task<TokenViewModel> GenerateAuthTokensAsync(ApplicationUser user)
         {
             var claims = GetUserClaims(user);
-            int expiresIn = 2;
+            int expiresIn = 60*60;
 
             var token = new JwtSecurityToken(
 
                 issuer: _authSettings.Issuer,
                 audience: _authSettings.Audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(expiresIn),
+                expires: DateTime.UtcNow.AddSeconds(expiresIn),
                 signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authSettings.SecretKey)),
                 SecurityAlgorithms.HmacSha256)
                 );
             var bearerToken = new JwtSecurityTokenHandler().WriteToken(token);
-            string refreshToken = await _userManager.GenerateUserTokenAsync(user, TokenOptions.DefaultProvider, _authSettings.RefreshTokenName);
-            return new()
+            string refreshToken = await _userManager.GenerateUserTokenAsync(user, TokenOptions.DefaultProvider, _authSettings.RefreshTokenPurpose);
+            return new(bearerToken, refreshToken)
             {
-                RefreshToken = refreshToken,
-                BearerToken = bearerToken,
                 ExpiresIn = expiresIn
             };
         }
@@ -54,7 +52,7 @@ namespace CleanDesign.Infrastructure.AuthHelpers
 
             var claims = new List<Claim>
             {
-                new(ClaimTypes.Name, user.Name),
+                new(ClaimTypes.Name, user.UserName),
                 new(ClaimTypes.Email, user.Email),
                 new(ClaimTypes.NameIdentifier, user.Id.ToString())
             };
@@ -62,6 +60,23 @@ namespace CleanDesign.Infrastructure.AuthHelpers
 #pragma warning restore CS8604 // Possible null reference argument.
 
             return claims;
+        }
+
+        public ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
+        {
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false, //you might want to validate the audience and issuer depending on your use case
+                ValidateIssuer = false,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authSettings.SecretKey)),
+                ValidateLifetime = false //here we are saying that we don't care about the token's expiration date
+            };
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
+            if (securityToken is not JwtSecurityToken jwtSecurityToken || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+                throw new SecurityTokenException("Invalid token");
+            return principal;
         }
     }
 }
