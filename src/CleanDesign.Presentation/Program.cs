@@ -4,6 +4,8 @@ using CleanDesign.Presentation.Exceptions;
 using CleanDesign.SharedKernel;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,17 @@ builder.Host.UseSerilog((context, configuration) =>
 // Add services to the container.
 
 builder.Services.AddControllers();
+// Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigin",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 
 builder.Services.AddSwaggerGen(opt =>
 {
@@ -52,14 +65,15 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSet
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP requeCleanDesign.SharedKernel.Result<CleanDesign.Application.ViewModels.CategoryResponseViewModel>>(CleanDesign.Application.Commands.Category.CreateCategoryCommand.CreateCategoryCommandHandler) -> CleanDesign.Application.Interfaces.IUnitOfWork(CleanDesign.Infrastructure.Repositories.UnitOfWork) -> CleanDesign.Application.Interfaces.IUnitOfWorkst pipeline.
 
 if (app.Environment.IsDevelopment())
 {
+}
     app.UseSwaggerUI();
     app.UseSwagger();
-}
 app.UseHttpsRedirection();
+app.UseCors("AllowAllOrigin");
 
 app.UseAuthentication();
 

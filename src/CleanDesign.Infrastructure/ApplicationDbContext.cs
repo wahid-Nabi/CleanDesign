@@ -7,6 +7,15 @@ namespace CleanDesign.Infrastructure
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
     {
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Address> Address { get; set; } 
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderItem> OrderItem { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -27,6 +36,8 @@ namespace CleanDesign.Infrastructure
                 e.HasData(user);
             });
 
+            builder.Entity<IdentityUserRole<Guid>>().HasData(userRole);
+
             builder.Entity<ApplicationRole>(e =>
             {
                 e.Property(x => x.Id).HasMaxLength(50);
@@ -35,7 +46,23 @@ namespace CleanDesign.Infrastructure
                 e.HasData(role);
             });
 
-            builder.Entity<IdentityUserRole<Guid>>().HasData(userRole);
+            builder.Entity<Product>()
+                .HasMany(p => p.Categories)
+                .WithMany(p => p.Products);
+
+            builder.Entity<Customer>()
+                .HasMany(p => p.Orders).
+                WithOne(o => o.Customer)
+                .HasForeignKey(c=>c.CustomerId);
+
+            builder.Entity<Customer>()
+                .HasMany(p => p.Addresses).
+                WithOne(o => o.Customer).
+                HasForeignKey(a=>a.CustomerId);
+
+            builder.Entity<Product>()
+                .HasMany(p=>p.Categories)
+                .WithMany(p => p.Products);
 
 
 

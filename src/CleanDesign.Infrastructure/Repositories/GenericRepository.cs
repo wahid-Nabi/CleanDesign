@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanDesign.Infrastructure.Repositories
 {
-    internal class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly ApplicationDbContext _context;
         private readonly DbSet<T> _entity;
@@ -13,9 +13,10 @@ namespace CleanDesign.Infrastructure.Repositories
             _entity = _context.Set<T>();
         }
 
-        public async Task CreateAsync(T entity)
+        public async Task<T> CreateAsync(T entity)
         {
             await _entity.AddAsync(entity);
+            return entity;
         }
         public void Update(T entity)
         {
@@ -32,7 +33,7 @@ namespace CleanDesign.Infrastructure.Repositories
             return await _entity.FindAsync(id) ?? Activator.CreateInstance<T>();
         }
 
-        public async Task<IEnumerable<T>> GetAsync()
+        public async Task<List<T>> GetAsync()
         {
             return await _entity.ToListAsync();
         }

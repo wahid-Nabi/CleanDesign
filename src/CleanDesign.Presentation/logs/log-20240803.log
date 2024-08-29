@@ -1,0 +1,98 @@
+2024-08-03 15:01:34.752 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5068/api/auth/forget-password/clean.Admin@yopmail.com - null null
+2024-08-03 15:01:34.950 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:01:34.957 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5068/api/auth/forget-password/clean.Admin@yopmail.com - 204 null null 209.3632ms
+2024-08-03 15:01:34.966 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.Admin@yopmail.com - application/json null
+2024-08-03 15:01:34.984 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:01:35.006 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-08-03 15:01:35.030 +05:30 [INF] Route matched with {action = "ForgetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(System.String) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-08-03 15:01:43.939 +05:30 [INF] Executed DbCommand (144ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-08-03 15:01:49.019 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result'.
+2024-08-03 15:01:49.029 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation) in 13994.7091ms
+2024-08-03 15:01:49.032 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ForgetPassword (CleanDesign.Presentation)'
+2024-08-03 15:01:49.034 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/auth/forget-password/clean.Admin@yopmail.com - 200 null application/json; charset=utf-8 14067.2214ms
+2024-08-03 15:07:44.181 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5068/api/auth/reset-password - null null
+2024-08-03 15:07:44.194 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:07:44.198 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5068/api/auth/reset-password - 204 null null 19.3411ms
+2024-08-03 15:07:44.215 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5068/api/auth/reset-password - application/json 77
+2024-08-03 15:07:44.227 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:07:44.229 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ResetPassword (CleanDesign.Presentation)'
+2024-08-03 15:07:44.369 +05:30 [INF] Route matched with {action = "ResetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPassword(CleanDesign.Application.Commands.Auth.ResetPassword.ResetPasswordCommand) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-08-03 15:07:44.673 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-08-03 15:07:44.802 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-03 15:07:44.811 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-08-03 15:07:44.883 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@p20='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 50), @p21='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 50), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 250), @p13='?' (Size = 15), @p14='?' (DbType = Boolean), @p15='?' (Size = 50), @p16='?' (DbType = Boolean), @p17='?' (DbType = Guid), @p18='?' (DbType = DateTime2), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [CreatedBy] = @p2, [CreatedOn] = @p3, [Deleted] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [Name] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UpdatedBy] = @p17, [UpdatedOn] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2024-08-03 15:07:44.901 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result'.
+2024-08-03 15:07:44.903 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ResetPassword (CleanDesign.Presentation) in 524.8403ms
+2024-08-03 15:07:44.904 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ResetPassword (CleanDesign.Presentation)'
+2024-08-03 15:07:44.905 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5068/api/auth/reset-password - 200 null application/json; charset=utf-8 690.1982ms
+2024-08-03 15:08:22.869 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5068/api/auth/login - null null
+2024-08-03 15:08:22.891 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:08:22.895 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5068/api/auth/login - 204 null null 26.6128ms
+2024-08-03 15:08:22.902 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/login - application/json 59
+2024-08-03 15:08:22.910 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:08:22.913 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-08-03 15:08:22.926 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanDesign.Application.Queries.Auth.Login.LoginQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-08-03 15:08:22.963 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-08-03 15:08:23.532 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-08-03 15:08:23.653 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-08-03 15:08:23.694 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Name], [a].[NormalizedName], [a].[UpdatedBy], [a].[UpdatedOn]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-08-03 15:08:23.782 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-08-03 15:08:24.101 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-08-03 15:08:27.920 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result'.
+2024-08-03 15:08:27.930 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation) in 4999.8393ms
+2024-08-03 15:08:27.938 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.Login (CleanDesign.Presentation)'
+2024-08-03 15:08:27.945 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/login - 200 null application/json; charset=utf-8 5042.4048ms
+2024-08-03 15:08:47.236 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5068/api/auth/verify-two-factor-token - null null
+2024-08-03 15:08:47.240 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:08:47.241 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5068/api/auth/verify-two-factor-token - 204 null null 4.8785ms
+2024-08-03 15:08:47.244 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/auth/verify-two-factor-token - application/json 50
+2024-08-03 15:08:47.247 +05:30 [INF] CORS policy execution successful.
+2024-08-03 15:08:47.249 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.AuthController.ValidateTwoFactorToken (CleanDesign.Presentation)'
+2024-08-03 15:08:47.260 +05:30 [INF] Route matched with {action = "ValidateTwoFactorToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ValidateTwoFactorToken(CleanDesign.Application.Queries.Auth.ValidateToken.ValidateTwoFactorTokenQuery) on controller CleanDesign.Presentation.Controllers.AuthController (CleanDesign.Presentation).
+2024-08-03 15:08:47.290 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Deleted], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedBy], [a].[UpdatedOn], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-08-03 15:08:47.993 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result`1[[CleanDesign.Application.ViewModels.TokenViewModel, CleanDesign.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-03 15:08:48.013 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.AuthController.ValidateTwoFactorToken (CleanDesign.Presentation) in 748.8195ms
+2024-08-03 15:08:48.017 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.AuthController.ValidateTwoFactorToken (CleanDesign.Presentation)'
+2024-08-03 15:08:48.019 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/auth/verify-two-factor-token - 200 null application/json; charset=utf-8 775.096ms
+2024-08-03 15:12:27.840 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-03 15:12:27.929 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 88.6906ms
+2024-08-03 15:12:27.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-03 15:12:27.993 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 16.9651ms
+2024-08-03 15:12:28.152 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-03 15:12:28.233 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.8439ms

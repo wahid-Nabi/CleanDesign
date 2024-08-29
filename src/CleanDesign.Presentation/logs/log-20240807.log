@@ -1,0 +1,180 @@
+2024-08-07 17:10:08.702 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:08.732 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:08.732 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:08.956 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:08.956 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:08.956 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:35.744 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:35.802 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:35.802 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 17:10:38.062 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 17:10:38.114 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 17:10:38.116 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 17:10:38.118 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 17:10:38.154 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 17:10:38.164 +05:30 [INF] Applying migration '20240807114010_Initial'.
+2024-08-07 17:10:38.326 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetUserRoles]
+WHERE [RoleId] = '909a795a-e1b3-4d66-ae00-abcc6ecee376' AND [UserId] = 'e6b44979-d708-4a27-973b-4107f13ed485';
+SELECT @@ROWCOUNT;
+2024-08-07 17:10:38.388 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetRoles]
+WHERE [Id] = '909a795a-e1b3-4d66-ae00-abcc6ecee376';
+SELECT @@ROWCOUNT;
+2024-08-07 17:10:38.482 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetUsers]
+WHERE [Id] = 'e6b44979-d708-4a27-973b-4107f13ed485';
+SELECT @@ROWCOUNT;
+2024-08-07 17:10:38.732 +05:30 [INF] Executed DbCommand (249ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] uniqueidentifier NULL,
+    [UpdatedOn] datetime2 NULL,
+    [UpdatedBy] uniqueidentifier NULL,
+    [Deleted] bit NOT NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([Id])
+);
+2024-08-07 17:10:38.736 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Customers] (
+    [Id] uniqueidentifier NOT NULL,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] uniqueidentifier NULL,
+    [UpdatedOn] datetime2 NULL,
+    [UpdatedBy] uniqueidentifier NULL,
+    [Deleted] bit NOT NULL,
+    CONSTRAINT [PK_Customers] PRIMARY KEY ([Id])
+);
+2024-08-07 17:10:38.765 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] uniqueidentifier NULL,
+    [UpdatedOn] datetime2 NULL,
+    [UpdatedBy] uniqueidentifier NULL,
+    [Deleted] bit NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id])
+);
+2024-08-07 17:10:38.828 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [Id] uniqueidentifier NOT NULL,
+    [CustomerId] uniqueidentifier NOT NULL,
+    [AddressLine1] nvarchar(max) NULL,
+    [AddressLine2] nvarchar(max) NULL,
+    [City] nvarchar(max) NOT NULL,
+    [State] nvarchar(max) NOT NULL,
+    [PostalCode] nvarchar(max) NOT NULL,
+    [Country] nvarchar(max) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] uniqueidentifier NULL,
+    [UpdatedOn] datetime2 NULL,
+    [UpdatedBy] uniqueidentifier NULL,
+    [Deleted] bit NOT NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Address_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 17:10:38.834 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Order] (
+    [Id] uniqueidentifier NOT NULL,
+    [CustomerId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL,
+    [TotalAmount] decimal(18,2) NOT NULL,
+    [Status] nvarchar(max) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] uniqueidentifier NULL,
+    [UpdatedOn] datetime2 NULL,
+    [UpdatedBy] uniqueidentifier NULL,
+    [Deleted] bit NOT NULL,
+    CONSTRAINT [PK_Order] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Order_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 17:10:38.875 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [CategoryProduct] (
+    [CategoriesId] uniqueidentifier NOT NULL,
+    [ProductsId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_CategoryProduct] PRIMARY KEY ([CategoriesId], [ProductsId]),
+    CONSTRAINT [FK_CategoryProduct_Category_CategoriesId] FOREIGN KEY ([CategoriesId]) REFERENCES [Category] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_CategoryProduct_Products_ProductsId] FOREIGN KEY ([ProductsId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 17:10:38.965 +05:30 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [OrderItem] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderId] uniqueidentifier NOT NULL,
+    [ProductId] uniqueidentifier NOT NULL,
+    [Quantity] int NOT NULL,
+    [UnitPrice] decimal(18,2) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] uniqueidentifier NULL,
+    [UpdatedOn] datetime2 NULL,
+    [UpdatedBy] uniqueidentifier NULL,
+    [Deleted] bit NOT NULL,
+    CONSTRAINT [PK_OrderItem] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderItem_Order_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Order] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_OrderItem_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE
+);
+2024-08-07 17:10:39.285 +05:30 [INF] Executed DbCommand (319ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Name', N'NormalizedName', N'UpdatedBy', N'UpdatedOn') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Deleted], [Name], [NormalizedName], [UpdatedBy], [UpdatedOn])
+VALUES ('0fd80579-7cd4-4e61-b611-cd09ea970096', NULL, '0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc', '2024-08-07T17:10:08.9318966+05:30', CAST(0 AS bit), N'SuperAdmin', N'SUPERADMIN', '0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc', '2024-08-07T17:10:08.9318991+05:30');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Name', N'NormalizedName', N'UpdatedBy', N'UpdatedOn') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF;
+2024-08-07 17:10:39.319 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Email', N'EmailConfirmed', N'LockoutEnabled', N'LockoutEnd', N'Name', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'SecurityStamp', N'TwoFactorEnabled', N'UpdatedBy', N'UpdatedOn', N'UserName') AND [object_id] = OBJECT_ID(N'[AspNetUsers]'))
+    SET IDENTITY_INSERT [AspNetUsers] ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Deleted], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UpdatedBy], [UpdatedOn], [UserName])
+VALUES ('0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc', 0, N'921f32f1-e683-40b0-99c6-71cbd13527ed', '0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc', '2024-08-07T17:10:08.8499512+05:30', CAST(0 AS bit), N'clean.admin@yopmail.com', CAST(1 AS bit), CAST(0 AS bit), NULL, N'Admin User', N'CLEAN.ADMIN@YOPMAIL.COM', N'ADMIN', N'AQAAAAIAAYagAAAAEAYCcYuDSIyG7KNsjyiq8yH48UYPQjgDzhcCTxKT1QCxGTxu5cfdbptpbGPwzbr/Tg==', N'1234567890', CAST(1 AS bit), N'3c9c6589-be28-40ad-9f68-8c81760f47fd', CAST(0 AS bit), '0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc', '2024-08-07T17:10:08.8499528+05:30', N'admin');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Email', N'EmailConfirmed', N'LockoutEnabled', N'LockoutEnd', N'Name', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'SecurityStamp', N'TwoFactorEnabled', N'UpdatedBy', N'UpdatedOn', N'UserName') AND [object_id] = OBJECT_ID(N'[AspNetUsers]'))
+    SET IDENTITY_INSERT [AspNetUsers] OFF;
+2024-08-07 17:10:41.463 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'RoleId', N'UserId') AND [object_id] = OBJECT_ID(N'[AspNetUserRoles]'))
+    SET IDENTITY_INSERT [AspNetUserRoles] ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES ('0fd80579-7cd4-4e61-b611-cd09ea970096', '0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'RoleId', N'UserId') AND [object_id] = OBJECT_ID(N'[AspNetUserRoles]'))
+    SET IDENTITY_INSERT [AspNetUserRoles] OFF;
+2024-08-07 17:10:41.472 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_CustomerId] ON [Address] ([CustomerId]);
+2024-08-07 17:10:41.477 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_CategoryProduct_ProductsId] ON [CategoryProduct] ([ProductsId]);
+2024-08-07 17:10:41.479 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_CustomerId] ON [Order] ([CustomerId]);
+2024-08-07 17:10:41.483 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_OrderItem_OrderId] ON [OrderItem] ([OrderId]);
+2024-08-07 17:10:41.484 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_OrderItem_ProductId] ON [OrderItem] ([ProductId]);
+2024-08-07 17:10:41.488 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240807114010_Initial', N'8.0.7');
+2024-08-07 18:33:58.431 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 18:33:58.453 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 18:33:58.453 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-07 18:33:58.985 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:33:59.004 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:33:59.006 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 18:33:59.006 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 18:33:59.019 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 18:33:59.030 +05:30 [INF] No migrations were applied. The database is already up to date.

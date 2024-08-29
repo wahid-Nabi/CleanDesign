@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
+using System.Web;
 
 namespace CleanDesign.Infrastructure.Repositories
 {
@@ -82,8 +83,10 @@ namespace CleanDesign.Infrastructure.Repositories
                 return Result.Failure<bool>(UserRegisterErrors.RegistrationFailed);
             }
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            var encodedToken = HttpUtility.UrlEncode(token);
             string subject = "CleanDesign - Confirmation email";
-            string link = _appSettings.BaseUiUrl + $"/confirm-email/{user.UserName}/{token}";
+            string link = _appSettings.BaseUiUrl + $"/confirm-email?username={user.UserName}&token={encodedToken}";
             string body = $"<p>Confirm the email, Please click link <a href='{link}'>{link}</a></p>";
             var mailModel = new EmailViewModel(user.Email, subject, body);
             return _emailSender.SendEmail(mailModel);

@@ -1,4 +1,5 @@
 ﻿using CleanDesign.Application.Abstractions;
+using CleanDesign.Application.Interfaces;
 using CleanDesign.Domain.Entities;
 using CleanDesign.Domain.Interfaces;
 using CleanDesign.Infrastructure.AuthHelpers;
@@ -61,7 +62,9 @@ namespace CleanDesign.Infrastructure
             services.AddTransient<IAuthRepository,AuthRepository>();
             services.AddTransient<IAuthHelper, AuthHelper>();
             services.AddTransient<IEmailSender, EmailSender>();
-
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
     }

@@ -1,4 +1,6 @@
-﻿namespace CleanDesign.Domain.Interfaces
+﻿using CleanDesign.SharedKernel;
+
+namespace CleanDesign.Domain.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {
@@ -7,7 +9,7 @@
         /// </summary>
         /// <param name="entity">Entity object to be created in database</param>
         /// <returns>returns the newly created object if successfull otherwise error</returns>
-        Task CreateAsync(T entity);
+        Task<T> CreateAsync(T entity);
 
         /// <summary>
         /// Update an existing T object
@@ -34,6 +36,6 @@
         /// Get all items from table T
         /// </summary>
         /// <returns>all items from entity T if exists otherwise notfound error</returns>
-        Task<IEnumerable<T>> GetAsync();
+        Task<List<T>> GetAsync();
     }
 }

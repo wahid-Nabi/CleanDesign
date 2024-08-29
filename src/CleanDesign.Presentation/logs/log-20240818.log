@@ -1,0 +1,64 @@
+2024-08-18 15:28:45.120 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-18 15:28:45.719 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-18 15:28:45.723 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-18 15:28:45.725 +05:30 [INF] Hosting environment: Development
+2024-08-18 15:28:45.727 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-18 15:28:47.544 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-08-18 15:28:48.004 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 301 0 null 471.4967ms
+2024-08-18 15:28:48.022 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-18 15:28:48.149 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 127.4328ms
+2024-08-18 15:28:48.193 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-18 15:28:48.211 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-bundle.js - null null
+2024-08-18 15:28:48.196 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-18 15:28:48.195 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - null null
+2024-08-18 15:28:48.217 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-18 15:28:48.237 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2024-08-18 15:28:48.246 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-08-18 15:28:48.247 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-bundle.js - 304 null text/javascript 39.3446ms
+2024-08-18 15:28:48.227 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 34.1083ms
+2024-08-18 15:28:48.259 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 42.6631ms
+2024-08-18 15:28:48.311 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-18 15:28:48.329 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - 200 152034 text/css 133.847ms
+2024-08-18 15:28:48.345 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 149.5631ms
+2024-08-18 15:28:48.463 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-08-18 15:28:48.478 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-18 15:28:48.481 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 499 628 image/png 17.7249ms
+2024-08-18 15:28:48.510 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-18 15:28:48.789 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 278.6941ms
+2024-08-18 15:28:58.882 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/product/calculate - null null
+2024-08-18 15:28:58.902 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-08-18 15:29:00.566 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:29:00.604 +05:30 [INF] Route matched with {action = "Calculate", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Calculate() on controller CleanDesign.Presentation.Controllers.ProductsController (CleanDesign.Presentation).
+2024-08-18 15:29:00.614 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Double'.
+2024-08-18 15:29:00.634 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation) in 20.9807ms
+2024-08-18 15:29:00.636 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:29:00.638 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/product/calculate - 200 null application/json; charset=utf-8 1756.3682ms
+2024-08-18 15:29:25.952 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/product/calculate - null null
+2024-08-18 15:29:25.977 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:29:25.982 +05:30 [INF] Route matched with {action = "Calculate", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Calculate() on controller CleanDesign.Presentation.Controllers.ProductsController (CleanDesign.Presentation).
+2024-08-18 15:30:36.829 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Double'.
+2024-08-18 15:30:36.859 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation) in 70867.485ms
+2024-08-18 15:30:36.871 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:30:36.874 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/product/calculate - 200 null application/json; charset=utf-8 70922.2458ms
+2024-08-18 15:30:49.518 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/product/calculate - null null
+2024-08-18 15:30:49.529 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:30:49.541 +05:30 [INF] Route matched with {action = "Calculate", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Calculate() on controller CleanDesign.Presentation.Controllers.ProductsController (CleanDesign.Presentation).
+2024-08-18 15:33:50.932 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Double'.
+2024-08-18 15:33:50.940 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation) in 181388.5567ms
+2024-08-18 15:33:50.981 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:33:50.984 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/product/calculate - 200 null application/json; charset=utf-8 181465.7879ms
+2024-08-18 15:33:51.954 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-18 15:33:52.081 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 126.4323ms
+2024-08-18 15:33:52.107 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-18 15:33:52.109 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-18 15:33:52.114 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 6.155ms
+2024-08-18 15:33:52.142 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.4911ms
+2024-08-18 15:33:52.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-18 15:33:52.295 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.7244ms
+2024-08-18 15:34:23.465 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/api/product/calculate - null null
+2024-08-18 15:34:23.492 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:34:23.503 +05:30 [INF] Route matched with {action = "Calculate", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Calculate() on controller CleanDesign.Presentation.Controllers.ProductsController (CleanDesign.Presentation).
+2024-08-18 15:34:27.847 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Double'.
+2024-08-18 15:34:27.852 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation) in 4338.7363ms
+2024-08-18 15:34:27.853 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.ProductsController.Calculate (CleanDesign.Presentation)'
+2024-08-18 15:34:27.855 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/api/product/calculate - 200 null application/json; charset=utf-8 4390.3537ms

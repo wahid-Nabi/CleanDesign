@@ -4,6 +4,7 @@ using CleanDesign.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CleanDesign.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240807114010_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -138,14 +141,14 @@ namespace CleanDesign.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("e19e81fc-0bed-4387-94af-0918b469c398"),
-                            CreatedBy = new Guid("f530fbd9-5f9d-4cd2-9695-6bdd0ba23307"),
-                            CreatedOn = new DateTime(2024, 8, 8, 15, 35, 49, 400, DateTimeKind.Local).AddTicks(4406),
+                            Id = new Guid("0fd80579-7cd4-4e61-b611-cd09ea970096"),
+                            CreatedBy = new Guid("0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc"),
+                            CreatedOn = new DateTime(2024, 8, 7, 17, 10, 8, 931, DateTimeKind.Local).AddTicks(8966),
                             Deleted = false,
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN",
-                            UpdatedBy = new Guid("f530fbd9-5f9d-4cd2-9695-6bdd0ba23307"),
-                            UpdatedOn = new DateTime(2024, 8, 8, 15, 35, 49, 400, DateTimeKind.Local).AddTicks(4422)
+                            UpdatedBy = new Guid("0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc"),
+                            UpdatedOn = new DateTime(2024, 8, 7, 17, 10, 8, 931, DateTimeKind.Local).AddTicks(8991)
                         });
                 });
 
@@ -244,11 +247,11 @@ namespace CleanDesign.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f530fbd9-5f9d-4cd2-9695-6bdd0ba23307"),
+                            Id = new Guid("0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "83f440f3-fa4f-4555-9d21-cef50422bd99",
-                            CreatedBy = new Guid("f530fbd9-5f9d-4cd2-9695-6bdd0ba23307"),
-                            CreatedOn = new DateTime(2024, 8, 8, 15, 35, 49, 350, DateTimeKind.Local).AddTicks(4145),
+                            ConcurrencyStamp = "921f32f1-e683-40b0-99c6-71cbd13527ed",
+                            CreatedBy = new Guid("0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc"),
+                            CreatedOn = new DateTime(2024, 8, 7, 17, 10, 8, 849, DateTimeKind.Local).AddTicks(9512),
                             Deleted = false,
                             Email = "clean.admin@yopmail.com",
                             EmailConfirmed = true,
@@ -256,13 +259,13 @@ namespace CleanDesign.Infrastructure.Migrations
                             Name = "Admin User",
                             NormalizedEmail = "CLEAN.ADMIN@YOPMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAENOdwmsDWOU8TdUM+IRRBJBkZqLHHxdiwlzuNHz0oJolTvVea1CKjMuR3kr1ie62zg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAYCcYuDSIyG7KNsjyiq8yH48UYPQjgDzhcCTxKT1QCxGTxu5cfdbptpbGPwzbr/Tg==",
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "647acef6-a544-461e-abf2-8a66b151d57e",
+                            SecurityStamp = "3c9c6589-be28-40ad-9f68-8c81760f47fd",
                             TwoFactorEnabled = false,
-                            UpdatedBy = new Guid("f530fbd9-5f9d-4cd2-9695-6bdd0ba23307"),
-                            UpdatedOn = new DateTime(2024, 8, 8, 15, 35, 49, 350, DateTimeKind.Local).AddTicks(4163),
+                            UpdatedBy = new Guid("0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc"),
+                            UpdatedOn = new DateTime(2024, 8, 7, 17, 10, 8, 849, DateTimeKind.Local).AddTicks(9528),
                             UserName = "admin"
                         });
                 });
@@ -463,41 +466,6 @@ namespace CleanDesign.Infrastructure.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("CleanDesign.Domain.Entities.ProductImage", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("Deleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("UpdatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductImages");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.Property<int>("Id")
@@ -584,8 +552,8 @@ namespace CleanDesign.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("f530fbd9-5f9d-4cd2-9695-6bdd0ba23307"),
-                            RoleId = new Guid("e19e81fc-0bed-4387-94af-0918b469c398")
+                            UserId = new Guid("0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc"),
+                            RoleId = new Guid("0fd80579-7cd4-4e61-b611-cd09ea970096")
                         });
                 });
 
@@ -664,17 +632,6 @@ namespace CleanDesign.Infrastructure.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("CleanDesign.Domain.Entities.ProductImage", b =>
-                {
-                    b.HasOne("CleanDesign.Domain.Entities.Product", "Product")
-                        .WithMany("ProductImages")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("CleanDesign.Domain.Entities.ApplicationRole", null)
@@ -736,11 +693,6 @@ namespace CleanDesign.Infrastructure.Migrations
             modelBuilder.Entity("CleanDesign.Domain.Entities.Order", b =>
                 {
                     b.Navigation("OrderItems");
-                });
-
-            modelBuilder.Entity("CleanDesign.Domain.Entities.Product", b =>
-                {
-                    b.Navigation("ProductImages");
                 });
 #pragma warning restore 612, 618
         }

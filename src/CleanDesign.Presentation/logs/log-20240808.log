@@ -1,0 +1,407 @@
+2024-08-08 14:41:03.029 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 14:41:03.745 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 14:41:03.750 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 14:41:03.752 +05:30 [INF] Hosting environment: Development
+2024-08-08 14:41:03.754 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 14:41:06.624 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger - null null
+2024-08-08 14:41:07.013 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger - 301 0 null 393.9917ms
+2024-08-08 14:41:07.037 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 14:41:07.204 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 167.5812ms
+2024-08-08 14:41:07.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - null null
+2024-08-08 14:41:07.524 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 14:41:07.518 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-bundle.js - null null
+2024-08-08 14:41:07.546 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 14:41:07.552 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-08 14:41:07.572 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 28.273ms
+2024-08-08 14:41:07.601 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-08-08 14:41:07.619 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 66.7335ms
+2024-08-08 14:41:07.635 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-08 14:41:07.640 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - 200 152034 text/css 125.5477ms
+2024-08-08 14:41:07.669 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-08-08 14:41:07.672 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 155.849ms
+2024-08-08 14:41:07.706 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 182.57ms
+2024-08-08 14:41:08.230 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 14:41:08.417 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 186.4351ms
+2024-08-08 14:50:20.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 14:50:20.594 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 83.8688ms
+2024-08-08 14:50:20.660 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 14:50:20.667 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 6.8228ms
+2024-08-08 14:50:20.673 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 14:50:20.694 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.1871ms
+2024-08-08 14:50:21.269 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-08-08 14:50:21.270 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 14:50:21.284 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-08 14:50:21.285 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 499 628 image/png 16.9479ms
+2024-08-08 14:50:21.308 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.7621ms
+2024-08-08 14:56:54.351 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:56:54.379 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:56:54.379 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:56:54.545 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:56:54.545 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:56:54.545 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:57:44.595 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:57:44.666 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:57:44.666 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 14:57:45.529 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-08 14:57:45.565 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-08 14:57:45.567 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-08 14:57:45.568 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-08 14:57:45.599 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-08 14:57:45.607 +05:30 [INF] Applying migration '20240808092655_added productimage and modified product table'.
+2024-08-08 14:57:45.726 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetUserRoles]
+WHERE [RoleId] = '0fd80579-7cd4-4e61-b611-cd09ea970096' AND [UserId] = '0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc';
+SELECT @@ROWCOUNT;
+2024-08-08 14:57:45.764 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetRoles]
+WHERE [Id] = '0fd80579-7cd4-4e61-b611-cd09ea970096';
+SELECT @@ROWCOUNT;
+2024-08-08 14:57:45.780 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetUsers]
+WHERE [Id] = '0d2a1339-fbb9-40c1-a0e3-83d7b4349fdc';
+SELECT @@ROWCOUNT;
+2024-08-08 14:57:45.816 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ProductImage] (
+    [Id] uniqueidentifier NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    [ProductId] uniqueidentifier NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] uniqueidentifier NULL,
+    [UpdatedOn] datetime2 NULL,
+    [UpdatedBy] uniqueidentifier NULL,
+    [Deleted] bit NOT NULL,
+    CONSTRAINT [PK_ProductImage] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_ProductImage_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE
+);
+2024-08-08 14:57:45.867 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Name', N'NormalizedName', N'UpdatedBy', N'UpdatedOn') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Deleted], [Name], [NormalizedName], [UpdatedBy], [UpdatedOn])
+VALUES ('78f45705-003f-4b50-b807-b2967d3b815b', NULL, '54f54ce5-0ddc-4f04-9381-b418676cacad', '2024-08-08T14:56:54.5216380+05:30', CAST(0 AS bit), N'SuperAdmin', N'SUPERADMIN', '54f54ce5-0ddc-4f04-9381-b418676cacad', '2024-08-08T14:56:54.5216397+05:30');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Name', N'NormalizedName', N'UpdatedBy', N'UpdatedOn') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF;
+2024-08-08 14:57:45.892 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Email', N'EmailConfirmed', N'LockoutEnabled', N'LockoutEnd', N'Name', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'SecurityStamp', N'TwoFactorEnabled', N'UpdatedBy', N'UpdatedOn', N'UserName') AND [object_id] = OBJECT_ID(N'[AspNetUsers]'))
+    SET IDENTITY_INSERT [AspNetUsers] ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Deleted], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UpdatedBy], [UpdatedOn], [UserName])
+VALUES ('54f54ce5-0ddc-4f04-9381-b418676cacad', 0, N'363235f3-7859-4be5-a3a8-252069bbfe05', '54f54ce5-0ddc-4f04-9381-b418676cacad', '2024-08-08T14:56:54.4708820+05:30', CAST(0 AS bit), N'clean.admin@yopmail.com', CAST(1 AS bit), CAST(0 AS bit), NULL, N'Admin User', N'CLEAN.ADMIN@YOPMAIL.COM', N'ADMIN', N'AQAAAAIAAYagAAAAEAJmh2/ycNjpwRGAy1q5JrVrNM+RJjk3KjLKiF6nRZBBhMq8+FOEDIZWHtgIDZSNiQ==', N'1234567890', CAST(1 AS bit), N'6e46bdcc-af58-4c8e-966c-9ad8dfbb6c71', CAST(0 AS bit), '54f54ce5-0ddc-4f04-9381-b418676cacad', '2024-08-08T14:56:54.4708835+05:30', N'admin');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Email', N'EmailConfirmed', N'LockoutEnabled', N'LockoutEnd', N'Name', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'SecurityStamp', N'TwoFactorEnabled', N'UpdatedBy', N'UpdatedOn', N'UserName') AND [object_id] = OBJECT_ID(N'[AspNetUsers]'))
+    SET IDENTITY_INSERT [AspNetUsers] OFF;
+2024-08-08 14:57:45.907 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'RoleId', N'UserId') AND [object_id] = OBJECT_ID(N'[AspNetUserRoles]'))
+    SET IDENTITY_INSERT [AspNetUserRoles] ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES ('78f45705-003f-4b50-b807-b2967d3b815b', '54f54ce5-0ddc-4f04-9381-b418676cacad');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'RoleId', N'UserId') AND [object_id] = OBJECT_ID(N'[AspNetUserRoles]'))
+    SET IDENTITY_INSERT [AspNetUserRoles] OFF;
+2024-08-08 14:57:45.912 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ProductImage_ProductId] ON [ProductImage] ([ProductId]);
+2024-08-08 14:57:45.915 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240808092655_added productimage and modified product table', N'8.0.7');
+2024-08-08 14:58:48.721 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 14:58:48.909 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 14:58:48.912 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 14:58:48.913 +05:30 [INF] Hosting environment: Development
+2024-08-08 14:58:48.913 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 14:58:50.197 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 14:58:50.429 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 234.3116ms
+2024-08-08 14:58:50.507 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 14:58:50.516 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 9.3347ms
+2024-08-08 14:58:50.532 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 14:58:50.603 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.7432ms
+2024-08-08 14:58:50.895 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 14:58:51.127 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 231.6546ms
+2024-08-08 15:04:11.806 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/product - application/json 1511
+2024-08-08 15:04:11.825 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-08-08 15:04:11.829 +05:30 [INF] CORS policy execution successful.
+2024-08-08 15:04:12.804 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.ProductsController.CreateAsync (CleanDesign.Presentation)'
+2024-08-08 15:04:12.858 +05:30 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAsync(CleanDesign.Application.Commands.Products.CreateProductCommand.ProductCommand) on controller CleanDesign.Presentation.Controllers.ProductsController (CleanDesign.Presentation).
+2024-08-08 15:04:13.006 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-08-08 15:04:13.070 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.ProductsController.CreateAsync (CleanDesign.Presentation) in 200.6381ms
+2024-08-08 15:04:13.078 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.ProductsController.CreateAsync (CleanDesign.Presentation)'
+2024-08-08 15:04:13.085 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/product - 400 null application/problem+json; charset=utf-8 1279.0739ms
+2024-08-08 15:04:51.898 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:04:51.913 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 14.4471ms
+2024-08-08 15:04:51.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:04:51.985 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:04:51.987 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 10.4774ms
+2024-08-08 15:04:52.056 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.0493ms
+2024-08-08 15:04:52.460 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:04:52.534 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 74.5196ms
+2024-08-08 15:05:36.754 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:05:36.788 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 34.5821ms
+2024-08-08 15:05:36.850 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:05:36.850 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:05:36.864 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 13.6856ms
+2024-08-08 15:05:36.880 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.1892ms
+2024-08-08 15:05:36.985 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:05:37.033 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.0163ms
+2024-08-08 15:05:49.760 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:05:49.781 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 20.4399ms
+2024-08-08 15:05:49.919 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:05:49.885 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:05:49.925 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 43.2129ms
+2024-08-08 15:05:49.929 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.4197ms
+2024-08-08 15:05:50.193 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:05:50.223 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.9124ms
+2024-08-08 15:06:12.005 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:06:12.027 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 20.1501ms
+2024-08-08 15:06:12.052 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - null null
+2024-08-08 15:06:12.062 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-bundle.js - null null
+2024-08-08 15:06:12.068 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:06:12.062 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-08 15:06:12.100 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 30.5648ms
+2024-08-08 15:06:12.153 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-08-08 15:06:12.068 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:06:12.163 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 101.1285ms
+2024-08-08 15:06:12.135 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-08 15:06:12.187 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 119.4884ms
+2024-08-08 15:06:12.191 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui.css - 200 152034 text/css 138.8037ms
+2024-08-08 15:06:12.196 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-08-08 15:06:12.214 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 152.6134ms
+2024-08-08 15:06:12.330 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-08-08 15:06:12.340 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-08 15:06:12.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 200 628 image/png 13.7191ms
+2024-08-08 15:06:12.386 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:06:12.407 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.9503ms
+2024-08-08 15:07:09.622 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 15:07:09.790 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 15:07:09.801 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 15:07:09.802 +05:30 [INF] Hosting environment: Development
+2024-08-08 15:07:09.803 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 15:07:10.559 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:07:10.776 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 219.4439ms
+2024-08-08 15:07:10.843 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:07:10.845 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:07:10.854 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 9.2443ms
+2024-08-08 15:07:10.912 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.4007ms
+2024-08-08 15:07:11.081 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:07:11.254 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 173.4275ms
+2024-08-08 15:14:18.575 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:14:18.631 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 56.1396ms
+2024-08-08 15:14:18.726 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:14:18.734 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 7.699ms
+2024-08-08 15:14:18.740 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:14:18.741 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-08 15:14:18.794 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-08-08 15:14:18.795 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.1752ms
+2024-08-08 15:14:18.796 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/swagger-ui-standalone-preset.js - 499 230280 text/javascript 54.7509ms
+2024-08-08 15:14:19.295 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:14:19.354 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.404ms
+2024-08-08 15:27:49.862 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:27:49.899 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 37.0978ms
+2024-08-08 15:27:50.011 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:27:50.016 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:27:50.073 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 56.5113ms
+2024-08-08 15:27:50.158 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 146.3813ms
+2024-08-08 15:27:50.341 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-08-08 15:27:50.382 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-08 15:27:50.384 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 200 628 image/png 42.5388ms
+2024-08-08 15:27:50.437 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:27:50.459 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.8324ms
+2024-08-08 15:28:45.156 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 15:28:45.341 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 15:28:45.344 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 15:28:45.345 +05:30 [INF] Hosting environment: Development
+2024-08-08 15:28:45.345 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 15:28:46.852 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:28:47.501 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 653.2537ms
+2024-08-08 15:28:47.585 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:28:47.593 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 8.0404ms
+2024-08-08 15:28:47.601 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:28:47.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.6818ms
+2024-08-08 15:28:47.801 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:28:48.084 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 283.3518ms
+2024-08-08 15:29:31.369 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 15:29:31.635 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 15:29:31.639 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 15:29:31.641 +05:30 [INF] Hosting environment: Development
+2024-08-08 15:29:31.643 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 15:29:33.018 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:29:33.335 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 324.8157ms
+2024-08-08 15:29:33.418 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:29:33.419 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:29:33.473 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 53.7497ms
+2024-08-08 15:29:33.502 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.9129ms
+2024-08-08 15:29:33.646 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:29:33.851 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 205.5956ms
+2024-08-08 15:32:47.693 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:32:47.710 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 17.5421ms
+2024-08-08 15:32:47.782 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:32:47.789 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 7.0744ms
+2024-08-08 15:32:47.810 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:32:47.900 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.9196ms
+2024-08-08 15:32:48.060 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:32:48.082 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.3581ms
+2024-08-08 15:34:32.543 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:34:32.570 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 26.3873ms
+2024-08-08 15:34:32.680 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:34:32.680 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:34:32.689 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 8.5178ms
+2024-08-08 15:34:32.736 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.5557ms
+2024-08-08 15:34:33.006 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:34:33.031 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.2891ms
+2024-08-08 15:35:49.197 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:35:49.238 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:35:49.239 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:35:49.421 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:35:49.421 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:35:49.421 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:37:00.045 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:37:00.086 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:37:00.087 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 15:37:00.596 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-08 15:37:00.617 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-08 15:37:00.619 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-08 15:37:00.620 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-08 15:37:00.643 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-08 15:37:00.651 +05:30 [INF] Applying migration '20240808100549_Configure product entity'.
+2024-08-08 15:37:00.757 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ProductImage] DROP CONSTRAINT [FK_ProductImage_Products_ProductId];
+2024-08-08 15:37:00.780 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ProductImage] DROP CONSTRAINT [PK_ProductImage];
+2024-08-08 15:37:00.793 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetUserRoles]
+WHERE [RoleId] = '78f45705-003f-4b50-b807-b2967d3b815b' AND [UserId] = '54f54ce5-0ddc-4f04-9381-b418676cacad';
+SELECT @@ROWCOUNT;
+2024-08-08 15:37:00.824 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetRoles]
+WHERE [Id] = '78f45705-003f-4b50-b807-b2967d3b815b';
+SELECT @@ROWCOUNT;
+2024-08-08 15:37:00.831 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetUsers]
+WHERE [Id] = '54f54ce5-0ddc-4f04-9381-b418676cacad';
+SELECT @@ROWCOUNT;
+2024-08-08 15:37:01.709 +05:30 [INF] Executed DbCommand (877ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[ProductImage]', N'ProductImages';
+2024-08-08 15:37:01.742 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[ProductImages].[IX_ProductImage_ProductId]', N'IX_ProductImages_ProductId', N'INDEX';
+2024-08-08 15:37:01.755 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ProductImages] ADD CONSTRAINT [PK_ProductImages] PRIMARY KEY ([Id]);
+2024-08-08 15:37:02.005 +05:30 [INF] Executed DbCommand (249ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Name', N'NormalizedName', N'UpdatedBy', N'UpdatedOn') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Deleted], [Name], [NormalizedName], [UpdatedBy], [UpdatedOn])
+VALUES ('e19e81fc-0bed-4387-94af-0918b469c398', NULL, 'f530fbd9-5f9d-4cd2-9695-6bdd0ba23307', '2024-08-08T15:35:49.4004406+05:30', CAST(0 AS bit), N'SuperAdmin', N'SUPERADMIN', 'f530fbd9-5f9d-4cd2-9695-6bdd0ba23307', '2024-08-08T15:35:49.4004422+05:30');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Name', N'NormalizedName', N'UpdatedBy', N'UpdatedOn') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF;
+2024-08-08 15:37:02.043 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Email', N'EmailConfirmed', N'LockoutEnabled', N'LockoutEnd', N'Name', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'SecurityStamp', N'TwoFactorEnabled', N'UpdatedBy', N'UpdatedOn', N'UserName') AND [object_id] = OBJECT_ID(N'[AspNetUsers]'))
+    SET IDENTITY_INSERT [AspNetUsers] ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Deleted], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UpdatedBy], [UpdatedOn], [UserName])
+VALUES ('f530fbd9-5f9d-4cd2-9695-6bdd0ba23307', 0, N'83f440f3-fa4f-4555-9d21-cef50422bd99', 'f530fbd9-5f9d-4cd2-9695-6bdd0ba23307', '2024-08-08T15:35:49.3504145+05:30', CAST(0 AS bit), N'clean.admin@yopmail.com', CAST(1 AS bit), CAST(0 AS bit), NULL, N'Admin User', N'CLEAN.ADMIN@YOPMAIL.COM', N'ADMIN', N'AQAAAAIAAYagAAAAENOdwmsDWOU8TdUM+IRRBJBkZqLHHxdiwlzuNHz0oJolTvVea1CKjMuR3kr1ie62zg==', N'1234567890', CAST(1 AS bit), N'647acef6-a544-461e-abf2-8a66b151d57e', CAST(0 AS bit), 'f530fbd9-5f9d-4cd2-9695-6bdd0ba23307', '2024-08-08T15:35:49.3504163+05:30', N'admin');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Deleted', N'Email', N'EmailConfirmed', N'LockoutEnabled', N'LockoutEnd', N'Name', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'SecurityStamp', N'TwoFactorEnabled', N'UpdatedBy', N'UpdatedOn', N'UserName') AND [object_id] = OBJECT_ID(N'[AspNetUsers]'))
+    SET IDENTITY_INSERT [AspNetUsers] OFF;
+2024-08-08 15:37:02.065 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'RoleId', N'UserId') AND [object_id] = OBJECT_ID(N'[AspNetUserRoles]'))
+    SET IDENTITY_INSERT [AspNetUserRoles] ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES ('e19e81fc-0bed-4387-94af-0918b469c398', 'f530fbd9-5f9d-4cd2-9695-6bdd0ba23307');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'RoleId', N'UserId') AND [object_id] = OBJECT_ID(N'[AspNetUserRoles]'))
+    SET IDENTITY_INSERT [AspNetUserRoles] OFF;
+2024-08-08 15:37:02.410 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ProductImages] ADD CONSTRAINT [FK_ProductImages_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE;
+2024-08-08 15:37:02.438 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240808100549_Configure product entity', N'8.0.7');
+2024-08-08 15:38:18.956 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 15:38:19.167 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 15:38:19.169 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 15:38:19.171 +05:30 [INF] Hosting environment: Development
+2024-08-08 15:38:19.171 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 15:38:20.662 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:38:21.054 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 401.4706ms
+2024-08-08 15:38:21.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:38:21.177 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 12.2556ms
+2024-08-08 15:38:21.199 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:38:21.256 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.6207ms
+2024-08-08 15:38:21.651 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:38:21.872 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 220.6693ms
+2024-08-08 15:42:35.277 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 15:42:35.443 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 15:42:35.447 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 15:42:35.449 +05:30 [INF] Hosting environment: Development
+2024-08-08 15:42:35.450 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 15:42:36.383 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:42:36.540 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 160.6673ms
+2024-08-08 15:42:36.606 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:42:36.615 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 9.5017ms
+2024-08-08 15:42:36.623 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:42:36.653 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.9661ms
+2024-08-08 15:42:36.792 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:42:36.901 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.3479ms
+2024-08-08 15:50:26.211 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 15:50:26.408 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 15:50:26.413 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 15:50:26.417 +05:30 [INF] Hosting environment: Development
+2024-08-08 15:50:26.420 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 15:50:27.961 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 15:50:28.206 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 251.5241ms
+2024-08-08 15:50:28.287 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 15:50:28.297 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 10.0155ms
+2024-08-08 15:50:28.304 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 15:50:28.358 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.9181ms
+2024-08-08 15:50:28.521 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 15:50:28.689 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 168.5535ms
+2024-08-08 16:30:36.526 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 16:30:36.620 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 96.3748ms
+2024-08-08 16:30:36.726 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 16:30:36.738 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 12.4474ms
+2024-08-08 16:30:36.759 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 16:30:36.788 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.7045ms
+2024-08-08 16:30:36.959 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 16:30:37.025 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 65.0469ms
+2024-08-08 16:33:47.084 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 16:33:47.165 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 80.7285ms
+2024-08-08 16:33:47.243 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 16:33:47.247 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 16:33:47.271 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.7681ms
+2024-08-08 16:33:47.272 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 25.1228ms
+2024-08-08 16:33:47.558 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-08-08 16:33:47.591 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-08 16:33:47.596 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 499 628 image/png 37.8412ms
+2024-08-08 16:33:47.643 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 16:33:47.662 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.6569ms
+2024-08-08 20:27:06.915 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-08 20:27:08.170 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-08 20:27:08.178 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 20:27:08.181 +05:30 [INF] Hosting environment: Development
+2024-08-08 20:27:08.183 +05:30 [INF] Content root path: D:\PersonalProject\CleanDesign\src\CleanDesign.Presentation
+2024-08-08 20:27:09.763 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/index.html - null null
+2024-08-08 20:27:10.551 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/index.html - 200 null text/html;charset=utf-8 801.6058ms
+2024-08-08 20:27:10.690 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 20:27:10.704 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 13.4733ms
+2024-08-08 20:27:10.728 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/_vs/browserLink - null null
+2024-08-08 20:27:10.823 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.9796ms
+2024-08-08 20:27:10.999 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - null null
+2024-08-08 20:27:11.041 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-08 20:27:11.044 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/favicon-32x32.png - 499 628 image/png 44.5993ms
+2024-08-08 20:27:11.140 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - null null
+2024-08-08 20:27:11.498 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 357.6745ms
+2024-08-08 20:27:50.659 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5068/api/category - application/json 68
+2024-08-08 20:27:50.689 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-08-08 20:27:50.693 +05:30 [INF] CORS policy execution successful.
+2024-08-08 20:27:51.824 +05:30 [INF] Executing endpoint 'CleanDesign.Presentation.Controllers.CategoryController.CreateAsync (CleanDesign.Presentation)'
+2024-08-08 20:27:51.886 +05:30 [INF] Route matched with {action = "Create", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAsync(CleanDesign.Application.Commands.Category.CreateCategoryCommand.CreateCategoryCommand) on controller CleanDesign.Presentation.Controllers.CategoryController (CleanDesign.Presentation).
+2024-08-08 20:27:54.858 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 20:27:54.864 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 20:27:54.869 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-08-08 20:27:55.428 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanDesign.SharedKernel.Result`1[[CleanDesign.Application.ViewModels.CategoryResponseViewModel, CleanDesign.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-08 20:27:55.466 +05:30 [INF] Executed action CleanDesign.Presentation.Controllers.CategoryController.CreateAsync (CleanDesign.Presentation) in 3568.8622ms
+2024-08-08 20:27:55.469 +05:30 [INF] Executed endpoint 'CleanDesign.Presentation.Controllers.CategoryController.CreateAsync (CleanDesign.Presentation)'
+2024-08-08 20:27:55.479 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5068/api/category - 200 null application/json; charset=utf-8 4879.2546ms
