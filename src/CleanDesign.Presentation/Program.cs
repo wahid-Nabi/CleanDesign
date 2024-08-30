@@ -51,7 +51,7 @@ builder.Services.AddSwaggerGen(opt =>
                     Id="Bearer"
                 }
             },
-            new string[]{}
+            Array.Empty<string>()
         }
     });
 });
@@ -72,6 +72,7 @@ if (app.Environment.IsDevelopment())
 }
     app.UseSwaggerUI();
     app.UseSwagger();
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigin");
 
@@ -79,7 +80,6 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.MapControllers();
 
-app.Run();
+await app.RunAsync().ConfigureAwait(false);

@@ -1,6 +1,6 @@
 ﻿namespace CleanDesign.Application.Exceptions
 {
-    internal class EmailNullException : ArgumentNullException
+    public class EmailNullException : ArgumentNullException
     {
         public EmailNullException() { }
         public EmailNullException(string message) : base(message) { }

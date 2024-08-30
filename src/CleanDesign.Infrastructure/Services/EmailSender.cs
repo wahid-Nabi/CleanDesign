@@ -14,7 +14,10 @@ namespace CleanDesign.Infrastructure.Services
 
         public EmailSender(IOptions<AppSettings> appSettings)
         {
+            ArgumentNullException.ThrowIfNull(appSettings);
             _emailSettings = appSettings.Value.EmailSettings;
+
+
         }
 
         public Result SendEmail(EmailViewModel model)
@@ -29,7 +32,7 @@ namespace CleanDesign.Infrastructure.Services
             {
                 Credentials = new NetworkCredential(_emailSettings.Email, _emailSettings.Password),
                 EnableSsl = true
-              
+
             };
 
             try
@@ -37,12 +40,16 @@ namespace CleanDesign.Infrastructure.Services
                 client.Send(message);
                 return Result.Success();
             }
-            catch (Exception ex)
+            catch (SmtpException ex)
             {
-                Console.WriteLine("Exception caught in CreateTestMessage2(): {0}",
-                    ex.ToString());
+                Console.WriteLine($"Exception caught in CreateTestMessage2(): {ex}");
 
                 return Result.Failure(EmailErrors.FailedToSendEmail);
+            }
+            finally
+            {
+                message.Dispose();
+                client.Dispose();
             }
         }
     }

@@ -3,7 +3,7 @@ using CleanDesign.Application.Interfaces;
 
 namespace CleanDesign.Infrastructure.Repositories
 {
-    public class UnitOfWork : IUnitOfWork,IDisposable
+    public sealed class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
 
@@ -14,8 +14,10 @@ namespace CleanDesign.Infrastructure.Repositories
         }
         public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            return await _context.SaveChangesAsync(cancellationToken);
+            return await _context.SaveChangesAsync(cancellationToken)
+                                 .ConfigureAwait(false);
         }
+
         public void Dispose()
         {
             _context.Dispose();
