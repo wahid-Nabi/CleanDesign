@@ -1,0 +1,108 @@
+2024-08-30 14:50:57.352 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-30 14:50:57.963 +05:30 [INF] Now listening on: https://localhost:7241
+2024-08-30 14:50:57.966 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-30 14:50:57.969 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-30 14:50:57.970 +05:30 [INF] Hosting environment: Development
+2024-08-30 14:50:57.971 +05:30 [INF] Content root path: D:\PersonalProject\e-commerce\CleanDesign\src\CleanDesign.Presentation
+2024-08-30 14:50:59.198 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger - null null
+2024-08-30 14:50:59.249 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger - 301 0 null 58.5438ms
+2024-08-30 14:50:59.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/index.html - null null
+2024-08-30 14:50:59.412 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/index.html - 200 null text/html;charset=utf-8 104.0333ms
+2024-08-30 14:50:59.462 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/swagger-ui.css - null null
+2024-08-30 14:50:59.462 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/swagger-ui-bundle.js - null null
+2024-08-30 14:50:59.476 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-30 14:50:59.496 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-30 14:50:59.597 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 110.4879ms
+2024-08-30 14:50:59.603 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-08-30 14:50:59.603 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-30 14:50:59.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 136.9303ms
+2024-08-30 14:50:59.614 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/swagger-ui.css - 200 152034 text/css 151.825ms
+2024-08-30 14:50:59.669 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-08-30 14:50:59.672 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 209.9871ms
+2024-08-30 14:50:59.946 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/favicon-32x32.png - null null
+2024-08-30 14:50:59.961 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-30 14:50:59.969 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/favicon-32x32.png - 200 628 image/png 22.7556ms
+2024-08-30 14:51:00.011 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/v1/swagger.json - null null
+2024-08-30 14:51:00.245 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 234.6649ms
+2024-08-30 14:59:24.283 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7241/api/auth/register - application/json 182
+2024-08-30 14:59:24.318 +05:30 [INF] CORS policy execution successful.
+2024-08-30 14:59:40.143 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at CleanDesign.Infrastructure.DependencyInjection.<>c__DisplayClass0_0.<AddInfrastructureServices>b__3(JwtBearerOptions options) in D:\PersonalProject\e-commerce\CleanDesign\src\CleanDesign.Infrastructure\DependencyInjection.cs:line 50
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-30 14:59:40.215 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7241/api/auth/register - 500 null text/plain; charset=utf-8 15932.5453ms
+2024-08-30 15:03:48.451 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7241/api/auth/register - application/json 182
+2024-08-30 15:03:48.481 +05:30 [INF] CORS policy execution successful.
+2024-08-30 15:03:48.491 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at CleanDesign.Infrastructure.DependencyInjection.<>c__DisplayClass0_0.<AddInfrastructureServices>b__3(JwtBearerOptions options) in D:\PersonalProject\e-commerce\CleanDesign\src\CleanDesign.Infrastructure\DependencyInjection.cs:line 50
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-30 15:03:48.504 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7241/api/auth/register - 500 null text/plain; charset=utf-8 53.7928ms
+2024-08-30 15:06:21.430 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/index.html - null null
+2024-08-30 15:06:21.440 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/index.html - 200 null text/html;charset=utf-8 9.9356ms
+2024-08-30 15:06:21.536 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-30 15:06:21.543 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 7.3987ms
+2024-08-30 15:06:21.535 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-30 15:06:30.312 +05:30 [INF] User profile is available. Using 'C:\Users\wahid\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-30 15:06:30.477 +05:30 [INF] Now listening on: https://localhost:7241
+2024-08-30 15:06:30.478 +05:30 [INF] Now listening on: http://localhost:5068
+2024-08-30 15:06:30.479 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-30 15:06:30.480 +05:30 [INF] Hosting environment: Development
+2024-08-30 15:06:30.481 +05:30 [INF] Content root path: D:\PersonalProject\e-commerce\CleanDesign\src\CleanDesign.Presentation
+2024-08-30 15:06:31.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger - null null
+2024-08-30 15:06:31.225 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger - 499 null null 51.1064ms
+2024-08-30 15:06:31.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/index.html - null null
+2024-08-30 15:06:31.324 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/index.html - 200 null text/html;charset=utf-8 77.9089ms
+2024-08-30 15:06:31.458 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-30 15:06:31.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/swagger-ui.css - null null
+2024-08-30 15:06:31.476 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 17.3058ms
+2024-08-30 15:06:31.494 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-30 15:06:31.495 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/swagger-ui.css - 499 152034 text/css 36.2518ms
+2024-08-30 15:06:31.804 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/favicon-32x32.png - null null
+2024-08-30 15:06:31.807 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-30 15:06:31.809 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/favicon-32x32.png - 200 628 image/png 5.5861ms
+2024-08-30 15:06:31.854 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7241/swagger/v1/swagger.json - null null
+2024-08-30 15:06:31.951 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7241/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.8817ms
+2024-08-30 15:08:14.512 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7241/api/auth/register - application/json 179
+2024-08-30 15:08:14.543 +05:30 [INF] CORS policy execution successful.
+2024-08-30 15:08:18.685 +05:30 [ERR] System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at CleanDesign.Infrastructure.DependencyInjection.<>c__DisplayClass0_0.<AddInfrastructureServices>b__3(JwtBearerOptions options) in D:\PersonalProject\e-commerce\CleanDesign\src\CleanDesign.Infrastructure\DependencyInjection.cs:line 50
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CleanDesign.Presentation.Exceptions.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\PersonalProject\e-commerce\CleanDesign\src\CleanDesign.Presentation\Middlewares\ExceptionHandlerMiddleware.cs:line 27
+2024-08-30 15:08:18.712 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7241/api/auth/register - 400 null application/json; charset=utf-8 4200.2364ms

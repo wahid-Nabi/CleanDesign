@@ -3,6 +3,8 @@ using CleanDesign.Application.Interfaces;
 using CleanDesign.Application.ViewModels;
 using CleanDesign.Domain.Entities;
 using CleanDesign.Domain.Interfaces;
+using CleanDesign.SharedKernel;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanDesign.Infrastructure.Repositories
 {
@@ -10,17 +12,24 @@ namespace CleanDesign.Infrastructure.Repositories
     {
         private readonly ApplicationDbContext _context;
 
-        public CategoryRepository(ApplicationDbContext context):base(context) 
+        public CategoryRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }
 
-        public async Task<CategoryResponseViewModel> GetCategoryByName(string name)
+        public async Task<Category> GetCategoryByName(string name)
         {
-            throw new NotImplementedException();
-            if(string.IsNullOrEmpty(name)) {
-                return resul
-            }
+
+            var category = await _context.Category.FirstOrDefaultAsync(c => c.Name == name);
+            return category;
+        }
+
+        public void DisplayName(string Name)
+        {
+            var category = new Category()
+            {
+                Name = Name
+            };
         }
     }
 }

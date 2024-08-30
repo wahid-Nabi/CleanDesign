@@ -7,7 +7,7 @@ namespace CleanDesign.Application.Interfaces
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
-         Task<CategoryResponseViewModel> GetCategoryByName(string name);
+         Task<Category> GetCategoryByName(string name);
 
     }
 }

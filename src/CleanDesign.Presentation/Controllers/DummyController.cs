@@ -9,9 +9,7 @@ namespace CleanDesign.Presentation.Controllers
     {
         [HttpGet]
         [Authorize]
-        public ActionResult GetDummy()
-        {
-            return Ok("Hi");
-        }
+        [ProducesResponseType<string>(StatusCodes.Status200OK)]
+        public ActionResult GetDummy() => Ok("Hi");
     }
 }

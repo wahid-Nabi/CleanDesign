@@ -3,20 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Presentation", "src/CleanDesign.Presentation\CleanDesign.Presentation.csproj", "{6F62D751-F0B5-4D70-BFC2-C3DCE2D29E36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Presentation", "src\CleanDesign.Presentation\CleanDesign.Presentation.csproj", "{6F62D751-F0B5-4D70-BFC2-C3DCE2D29E36}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Domain", "src/CleanDesign.Domain\CleanDesign.Domain.csproj", "{F75BF00E-BCDC-4643-BC5E-899064D6E1AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Domain", "src\CleanDesign.Domain\CleanDesign.Domain.csproj", "{F75BF00E-BCDC-4643-BC5E-899064D6E1AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Application", "src/CleanDesign.Application\CleanDesign.Application.csproj", "{AF9C25C8-C458-493E-93FB-D184D3DA0C83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Application", "src\CleanDesign.Application\CleanDesign.Application.csproj", "{AF9C25C8-C458-493E-93FB-D184D3DA0C83}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.SharedKernel", "src/CleanDesign.SharedKernel\CleanDesign.SharedKernel.csproj", "{F5A50751-7168-428A-BF15-EA48DD0CCFD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.SharedKernel", "src\CleanDesign.SharedKernel\CleanDesign.SharedKernel.csproj", "{F5A50751-7168-428A-BF15-EA48DD0CCFD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Infrastructure", "src/CleanDesign.Infrastructure\CleanDesign.Infrastructure.csproj", "{38309B12-B0B7-4C8E-A8E1-B85C1BD2A35E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanDesign.Infrastructure", "src\CleanDesign.Infrastructure\CleanDesign.Infrastructure.csproj", "{38309B12-B0B7-4C8E-A8E1-B85C1BD2A35E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6FBA5A3-7DFB-45FF-8D18-01A6E8203EE7}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.UnitTest", "Infrastructure.UnitTest\Infrastructure.UnitTest.csproj", "{1469EDF2-1F0A-4243-B233-13D36C9B08E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,16 +48,13 @@ Global
 		{38309B12-B0B7-4C8E-A8E1-B85C1BD2A35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38309B12-B0B7-4C8E-A8E1-B85C1BD2A35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38309B12-B0B7-4C8E-A8E1-B85C1BD2A35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1469EDF2-1F0A-4243-B233-13D36C9B08E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1469EDF2-1F0A-4243-B233-13D36C9B08E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1469EDF2-1F0A-4243-B233-13D36C9B08E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1469EDF2-1F0A-4243-B233-13D36C9B08E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6F62D751-F0B5-4D70-BFC2-C3DCE2D29E36} = {31E9D653-BB7F-422E-A03C-62A7E89A4D1D}
-		{F75BF00E-BCDC-4643-BC5E-899064D6E1AD} = {31E9D653-BB7F-422E-A03C-62A7E89A4D1D}
-		{AF9C25C8-C458-493E-93FB-D184D3DA0C83} = {31E9D653-BB7F-422E-A03C-62A7E89A4D1D}
-		{F5A50751-7168-428A-BF15-EA48DD0CCFD9} = {31E9D653-BB7F-422E-A03C-62A7E89A4D1D}
-		{38309B12-B0B7-4C8E-A8E1-B85C1BD2A35E} = {31E9D653-BB7F-422E-A03C-62A7E89A4D1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A78E917-965E-4424-B400-54B37C21C823}
