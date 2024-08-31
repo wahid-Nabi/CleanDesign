@@ -4,7 +4,7 @@
     {
         public required AuthSettings AuthSettings { get; set; }
         public required EmailSettings EmailSettings { get; set; }
-        public required string BaseUiUrl { get; set; }
+        public required Uri BaseUiUrl { get; set; }
 
     }
 

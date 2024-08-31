@@ -22,7 +22,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAllOrigin",
         builder =>
         {
-            builder.AllowAnyOrigin()
+            builder.WithOrigins("https://birdskart.vercel.app", "localhost", "*://localhost:*")
                    .AllowAnyMethod()
                    .AllowAnyHeader();
         });

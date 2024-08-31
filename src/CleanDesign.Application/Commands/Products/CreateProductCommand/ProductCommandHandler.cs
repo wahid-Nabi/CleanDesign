@@ -33,7 +33,7 @@ namespace CleanDesign.Application.Commands.Products.CreateProductCommand
             };
             if (request.Categories != null && request.Categories.Count > 0)
             {
-                product.Categories = await _repository.GetCategoryByIds(request.Categories);
+                product.Categories = await _repository.GetCategoryByIds(request.Categories).ConfigureAwait(false);
 
             }
 

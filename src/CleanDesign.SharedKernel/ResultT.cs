@@ -19,5 +19,10 @@
         }
 
         public static implicit operator Result<T>(T? value) => Create(value);
+
+        public Result<T> ToResult()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

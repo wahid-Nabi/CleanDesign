@@ -17,19 +17,11 @@ namespace CleanDesign.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<Category> GetCategoryByName(string name)
+        public async Task<Category?> GetCategoryByName(string name)
         {
 
-            var category = await _context.Category.FirstOrDefaultAsync(c => c.Name == name);
+            Category? category = await _context.Category.FirstOrDefaultAsync(c => c.Name == name).ConfigureAwait(false);
             return category;
-        }
-
-        public void DisplayName(string Name)
-        {
-            var category = new Category()
-            {
-                Name = Name
-            };
         }
     }
 }
